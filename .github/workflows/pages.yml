@@ -20,6 +20,8 @@ concurrency:
 
 jobs:
   deploy:
+    # The fork does not have GitHub Pages enabled; only deploy from the parent repository.
+    if: github.repository == 'LifeArchiveProject/WeChatDataAnalysis'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
